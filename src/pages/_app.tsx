@@ -1,15 +1,17 @@
 import '@/styles/globals.css'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import type { AppProps } from 'next/app'
-import '@fontsource/roboto/300.css'
-import '@fontsource/roboto/400.css'
-import '@fontsource/roboto/500.css'
-import '@fontsource/roboto/700.css'
 
 const theme = createTheme({
+  typography: {
+    fontFamily: 'Public Sans, Epilogue, sans-serif',
+  },
   palette: {
     primary: {
       main: 'rgb(15, 98, 254)',
+    },
+    secondary: {
+      main: '#2d3ed4',
     },
   },
 })
