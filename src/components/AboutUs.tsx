@@ -1,11 +1,12 @@
 import { Box, Typography } from '@mui/material'
+import HomeIds from '@/constants/homeIds'
 
-function AboutIzari() {
+function AboutUs() {
   return (
-    <Box>
+    <Box id={HomeIds.ABOUT_US}>
       <Typography>About Us</Typography>
     </Box>
   )
 }
 
-export default AboutIzari
+export default AboutUs

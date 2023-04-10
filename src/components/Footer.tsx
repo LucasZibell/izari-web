@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 
 function Footer() {
   return (
-    <Box>
+    <Box style={{ height: '600px' }}>
       <Typography>Footer</Typography>
     </Box>
   )
