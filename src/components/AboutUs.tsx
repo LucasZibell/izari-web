@@ -3,7 +3,7 @@ import HomeIds from '@/constants/homeIds'
 
 function AboutUs() {
   return (
-    <Box id={HomeIds.ABOUT_US}>
+    <Box id={HomeIds.ABOUT_US} style={{ height: '600px' }}>
       <Typography>About Us</Typography>
     </Box>
   )

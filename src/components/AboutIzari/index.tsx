@@ -8,11 +8,21 @@ import {
   Avatar,
   ListItemText,
 } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 import HomeIds from '@/constants/homeIds'
 
 import { features, webBrowsers, environments, networks } from './constants'
 
+const useStyles = makeStyles({
+  avatar: {
+    '&:hover': {
+      animation: 'shake 0.5s',
+    },
+  },
+})
+
 function AboutIzari() {
+  const classes = useStyles()
   return (
     <Box
       id={HomeIds.IZARI_FILECOIN}
@@ -30,8 +40,12 @@ function AboutIzari() {
       >
         <Typography
           variant="h1"
-          color="primary"
-          style={{ marginBottom: '20px' }}
+          style={{
+            background:
+              'linear-gradient(to bottom right, rgb(15, 98, 254), rgb(40, 46, 157))',
+            color: 'white',
+            marginBottom: '20px',
+          }}
         >
           Izari Filecoin
         </Typography>
@@ -52,7 +66,7 @@ function AboutIzari() {
           {features.map(({ FeatureImage, text, id }) => (
             <ListItem id={id}>
               <ListItemAvatar>
-                <Avatar sx={{ bgcolor: 'white' }}>
+                <Avatar className={classes.avatar} sx={{ bgcolor: 'white' }}>
                   <FeatureImage color="primary" />
                 </Avatar>
               </ListItemAvatar>
