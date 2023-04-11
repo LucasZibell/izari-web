@@ -26,7 +26,10 @@ function AboutUs() {
         padding: '5rem 5rem',
       }}
     >
-      <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
+      <Typography
+        variant="h2"
+        style={{ color: 'white', fontWeight: 'bold', marginBottom: '20px' }}
+      >
         What we do
       </Typography>
       <Typography
@@ -39,6 +42,7 @@ function AboutUs() {
         <Box
           component="span"
           sx={{
+            borderRadius: '20px',
             backgroundColor: 'primary.main',
             color: 'white',
             display: 'inline',
@@ -53,6 +57,7 @@ function AboutUs() {
         <Box
           component="span"
           sx={{
+            borderRadius: '20px',
             backgroundColor: 'primary.main',
             color: 'white',
             display: 'inline',
@@ -62,7 +67,10 @@ function AboutUs() {
           harness the full potential of blockchain and decentralized systems.
         </Box>
       </Typography>
-      <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
+      <Typography
+        variant="h2"
+        style={{ color: 'white', fontWeight: 'bold', marginBottom: '20px' }}
+      >
         Our Mission
       </Typography>
       <Typography
@@ -75,6 +83,7 @@ function AboutUs() {
         <Box
           component="span"
           sx={{
+            borderRadius: '20px',
             backgroundColor: 'primary.main',
             color: 'white',
             display: 'inline',

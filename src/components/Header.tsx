@@ -4,7 +4,7 @@ import { Box, Link, Typography } from '@mui/material'
 import ZondaxLogo from '@/assets/zondaxLogo.svg'
 import HomeIds from '@/constants/homeIds'
 
-const { IZARI_FILECOIN, ABOUT_FILECOIN, GETTING_STARTED, ABOUT_US } = HomeIds
+const { ABOUT_FILECOIN, GETTING_STARTED, ABOUT_US } = HomeIds
 
 function Header() {
   const scrollToTarget = (
@@ -23,7 +23,7 @@ function Header() {
     <Box
       style={{
         boxShadow: 'rgb(0 0 0 / 69%) 0px 0px 10px 4px',
-        padding: '20px 40px',
+        padding: '1.3rem 5rem',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -33,13 +33,6 @@ function Header() {
       <a href="https://zondax.ch/" target="_blank" rel="noopener noreferrer">
         <Image src={ZondaxLogo} alt="Zondax Logo" width={120} height={30} />
       </a>
-      <Link
-        href={`#${IZARI_FILECOIN}`}
-        onClick={(e) => scrollToTarget(e, IZARI_FILECOIN)}
-        style={{ textDecoration: 'none' }}
-      >
-        <Typography style={{ color: 'white' }}>Izari Filecoin</Typography>
-      </Link>
       <Link
         href={`#${ABOUT_FILECOIN}`}
         onClick={(e) => scrollToTarget(e, ABOUT_FILECOIN)}

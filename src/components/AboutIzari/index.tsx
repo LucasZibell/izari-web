@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { styled } from '@mui/material/styles'
 import {
+  useMediaQuery,
+  useTheme,
   Box,
   Typography,
   List,
@@ -11,7 +13,13 @@ import {
 } from '@mui/material'
 import HomeIds from '@/constants/homeIds'
 
-import { features, webBrowsers, environments, networks } from './constants'
+import {
+  featuresFirstColumn,
+  featuresSecondColumn,
+  webBrowsers,
+  environments,
+  networks,
+} from './constants'
 
 const RotateAvatar = styled(Avatar)(() => ({
   backgroundColor: 'white',
@@ -29,6 +37,9 @@ const JumpImage = styled(Box)(() => ({
 }))
 
 function AboutIzari() {
+  const theme = useTheme()
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'))
+
   return (
     <Box
       id={HomeIds.IZARI_FILECOIN}
@@ -36,10 +47,11 @@ function AboutIzari() {
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
+        flexWrap: isSmallScreen ? 'wrap' : 'nowrap',
         height: '100%',
         alignItems: 'center',
         justifyContent: 'space-between',
-        gap: '70px',
+        gap: isSmallScreen ? '30px' : '70px',
         padding: '4rem 5rem',
       }}
     >
@@ -63,6 +75,7 @@ function AboutIzari() {
           <Box
             component="span"
             sx={{
+              borderRadius: '20px',
               backgroundColor: 'primary.main',
               color: 'white',
               display: 'inline',
@@ -75,21 +88,39 @@ function AboutIzari() {
           versatile and flexible solution that can be used across a range of
           environments.
         </Typography>
-        <Typography variant="h2" color="primary">
+        <Typography
+          variant="h2"
+          color="primary"
+          style={{ marginBottom: '20px' }}
+        >
           Features
         </Typography>
-        <List sx={{ maxWidth: 360 }}>
-          {features.map(({ FeatureImage, text, id }) => (
-            <ListItem id={id}>
-              <ListItemAvatar>
-                <RotateAvatar>
-                  <FeatureImage color="primary" />
-                </RotateAvatar>
-              </ListItemAvatar>
-              <ListItemText primary={text} style={{ color: 'white' }} />
-            </ListItem>
-          ))}
-        </List>
+        <Box style={{ display: 'flex', gap: '60px' }}>
+          <List>
+            {featuresFirstColumn.map(({ FeatureImage, text, id }) => (
+              <ListItem id={id}>
+                <ListItemAvatar>
+                  <RotateAvatar>
+                    <FeatureImage color="primary" />
+                  </RotateAvatar>
+                </ListItemAvatar>
+                <ListItemText primary={text} style={{ color: 'white' }} />
+              </ListItem>
+            ))}
+          </List>
+          <List>
+            {featuresSecondColumn.map(({ FeatureImage, text, id }) => (
+              <ListItem id={id}>
+                <ListItemAvatar>
+                  <RotateAvatar>
+                    <FeatureImage color="primary" />
+                  </RotateAvatar>
+                </ListItemAvatar>
+                <ListItemText primary={text} style={{ color: 'white' }} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Box>
       <Box
         style={{
@@ -99,7 +130,7 @@ function AboutIzari() {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h3"
           color="primary"
           style={{ marginBottom: '10px' }}
         >
@@ -108,25 +139,28 @@ function AboutIzari() {
         <Box
           style={{
             display: 'flex',
-            flexWrap: 'wrap',
-            width: '100%',
             gap: '10px',
             marginBottom: '40px',
           }}
         >
           {networks.map(({ id, image, alt }) => (
-            <Image
-              style={{ width: '100%', height: 'auto', maxWidth: '200px' }}
-              alt={alt}
-              src={image}
-              id={id}
-            />
+            <JumpImage id={id}>
+              <Image
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '75px',
+                }}
+                alt={alt}
+                src={image}
+              />
+            </JumpImage>
           ))}
         </Box>
         <Typography
-          variant="h4"
+          variant="h3"
           color="primary"
-          style={{ alignSelf: 'end', marginBottom: '10px' }}
+          style={{ marginBottom: '10px' }}
         >
           Environments
         </Typography>
@@ -135,7 +169,8 @@ function AboutIzari() {
             display: 'flex',
             gap: '10px',
             marginBottom: '40px',
-            alignSelf: 'end',
+            // alignSelf: 'end',
+            alignItems: 'center',
           }}
         >
           {environments.map(({ id, image, alt }) => (
@@ -143,13 +178,13 @@ function AboutIzari() {
               <Image
                 alt={alt}
                 src={image}
-                style={{ width: '100%', height: 'auto', maxWidth: '100px' }}
+                style={{ width: '100%', height: 'auto', maxWidth: '75px' }}
               />
             </JumpImage>
           ))}
         </Box>
         <Typography
-          variant="h4"
+          variant="h3"
           color="primary"
           style={{ marginBottom: '10px' }}
         >
@@ -161,7 +196,7 @@ function AboutIzari() {
               <Image
                 alt={alt}
                 src={image}
-                style={{ width: '100%', height: 'auto', maxWidth: '100px' }}
+                style={{ width: '100%', height: 'auto', maxWidth: '75px' }}
               />
             </JumpImage>
           ))}

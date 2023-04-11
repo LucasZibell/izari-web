@@ -10,10 +10,10 @@ import FirefoxLogo from '@/assets/firefox-logo.png'
 import SafariLogo from '@/assets/safari-logo.png'
 import NodeLogo from '@/assets/node-logo.png'
 import ReactLogo from '@/assets/react-logo.png'
-import HyperspaceLogo from '@/assets/hyperspace-logo.png'
+import HyperspaceLogo from '@/assets/hyperspace-logo.jpeg'
 import MainnetLogo from '@/assets/mainnet-logo.png'
 
-export const features = [
+export const featuresFirstColumn = [
   {
     id: 'feat-node-comms',
     FeatureImage: CommsIcon,
@@ -34,6 +34,9 @@ export const features = [
     FeatureImage: PaidIcon,
     text: 'Transactions',
   },
+]
+
+export const featuresSecondColumn = [
   {
     id: 'feat-wallet',
     FeatureImage: WalletIcon,

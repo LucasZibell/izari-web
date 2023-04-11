@@ -31,7 +31,10 @@ function GettingStarted() {
       >
         How to start?
       </Typography>
-      <Typography variant="h4" style={{ color: 'white', marginBottom: '20px' }}>
+      <Typography
+        variant="h3"
+        style={{ fontWeight: 'bold', color: 'white', marginBottom: '30px' }}
+      >
         Install ⚙️
       </Typography>
       <Typography variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
@@ -40,11 +43,12 @@ function GettingStarted() {
       <Typography
         variant="h6"
         style={{
-          color: 'black',
-          backgroundColor: '#fafafa',
+          color: 'white',
+          backgroundColor: 'black',
           borderRadius: '5px',
           padding: '5px 10px',
-          marginBottom: '10px',
+          marginBottom: '40px',
+          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
         }}
       >
         yarn add @zondax/izari-filecoin
@@ -55,16 +59,20 @@ function GettingStarted() {
       <Typography
         variant="h6"
         style={{
-          backgroundColor: '#fafafa',
+          color: 'white',
+          backgroundColor: 'black',
           borderRadius: '5px',
-          color: 'black',
           padding: '5px 10px',
-          marginBottom: '40px',
+          marginBottom: '60px',
+          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
         }}
       >
         npm install --save @zondax/izari-filecoin
       </Typography>
-      <Typography variant="h4" style={{ color: 'white', marginBottom: '20px' }}>
+      <Typography
+        variant="h3"
+        style={{ fontWeight: 'bold', color: 'white', marginBottom: '30px' }}
+      >
         Use 🚀
       </Typography>
       <Typography variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
@@ -73,11 +81,12 @@ function GettingStarted() {
       <Typography
         variant="h6"
         style={{
-          backgroundColor: '#fafafa',
+          color: 'white',
+          backgroundColor: 'black',
           borderRadius: '5px',
-          color: 'black',
           padding: '5px 10px',
-          marginBottom: '20px',
+          marginBottom: '40px',
+          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
         }}
       >
         {`import { Wallet, Transaction, Account } from "@zondax/izari-filecoin"`}
@@ -88,19 +97,23 @@ function GettingStarted() {
       <Typography
         variant="h6"
         style={{
-          backgroundColor: '#fafafa',
+          color: 'white',
+          backgroundColor: 'black',
           borderRadius: '5px',
-          color: 'black',
           padding: '5px 10px',
-          marginBottom: '40px',
+          marginBottom: '60px',
+          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
         }}
       >
-        {`const { Wallet, Transaction, Account } = require("@zondax/izari-filecoin")"`}
+        {`const { Wallet, Transaction, Account } = require("@zondax/izari-filecoin")`}
       </Typography>
-      <Typography variant="h4" style={{ color: 'white' }}>
+      <Typography
+        variant="h3"
+        style={{ fontWeight: 'bold', color: 'white', marginBottom: '10px' }}
+      >
         Specific features 🔬
       </Typography>
-      <List style={{ marginBottom: '20px' }}>
+      <List style={{ marginBottom: '30px' }}>
         {specificFeatures.map((feat) => (
           <ListItem id={feat}>
             <Typography
@@ -114,24 +127,31 @@ function GettingStarted() {
           </ListItem>
         ))}
       </List>
-      <Typography variant="h4" style={{ color: 'white', marginBottom: '40px' }}>
+      <Typography
+        variant="h4"
+        style={{ fontWeight: 'bold', color: 'white', marginBottom: '40px' }}
+      >
         Examples 🛠️
       </Typography>
       <Editor
         value={code}
         onValueChange={(newCode) => setCode(newCode)}
-        highlight={(newCode) => highlight(newCode, languages.js, 'en')}
+        highlight={(newCode) =>
+          highlight(newCode, languages.javascript, 'javascript')
+        }
         padding={10}
         style={{
-          borderRadius: '5px',
+          borderRadius: '10px',
           backgroundColor: '#fafafa',
           fontFamily: '"Fira code", "Fira Mono", monospace',
           fontSize: 18,
-          marginBottom: '40px',
-          maxWidth: '80vw',
+          marginBottom: '60px',
         }}
       />
-      <Typography variant="h4" style={{ color: 'white', marginBottom: '40px' }}>
+      <Typography
+        variant="h4"
+        style={{ fontWeight: 'bold', color: 'white', marginBottom: '40px' }}
+      >
         More Info 📚
       </Typography>
       <Box

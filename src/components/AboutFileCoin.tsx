@@ -15,6 +15,7 @@ const TextLink = styled(Typography)<TextLinkProps>(({ theme, primary }) => ({
   color: primary ? 'white' : theme.palette.primary.main,
   padding: '10px 20px',
   borderRadius: '40px',
+  minWidth: '182px',
 }))
 
 function AboutFileCoin() {
@@ -23,19 +24,19 @@ function AboutFileCoin() {
       id={HomeIds.ABOUT_FILECOIN}
       style={{
         backgroundColor: 'rgb(32, 32, 40)',
+        width: '100%',
         display: 'flex',
         gap: '50px',
         alignItems: 'center',
+        justifyContent: 'center',
         padding: '4rem',
       }}
     >
-      <Box style={{ backgroundColor: 'white', borderRadius: '300px' }}>
-        <Image
-          style={{ width: '100%', height: 'auto' }}
-          alt="filecoin"
-          src={FileCoinLogo}
-        />
-      </Box>
+      <Image
+        style={{ width: '100%', height: 'auto', maxWidth: '100px' }}
+        alt="filecoin"
+        src={FileCoinLogo}
+      />
       <Box style={{ display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
           What is Filecoin?
