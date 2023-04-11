@@ -9,7 +9,13 @@ import { legalItems, companyItems, solutionItems } from './constants'
 
 function Footer() {
   return (
-    <Box style={{ padding: '4rem 5rem', width: '100%' }}>
+    <Box
+      style={{
+        padding: '2rem 5rem',
+        width: '100%',
+        borderTop: '1px solid white',
+      }}
+    >
       <Grid container alignItems="start" justifyContent="space-around">
         <Grid item xs={3}>
           <Grid container direction="column" spacing={2}>

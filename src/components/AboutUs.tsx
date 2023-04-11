@@ -1,5 +1,18 @@
 import { Box, Typography } from '@mui/material'
 import HomeIds from '@/constants/homeIds'
+import { styled } from '@mui/material/styles'
+
+const WorkWithUs = styled(Typography)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  fontWeight: 'bold',
+  fontSize: '30px',
+  color: 'white',
+  padding: '20px 30px',
+  borderRadius: '50px',
+  '&:hover': {
+    animation: 'littleShake 0.3s',
+  },
+}))
 
 function AboutUs() {
   return (
@@ -10,7 +23,7 @@ function AboutUs() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '4rem 5rem',
+        padding: '5rem 5rem',
       }}
     >
       <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
@@ -20,7 +33,7 @@ function AboutUs() {
         variant="h6"
         paragraph
         color="secondary"
-        style={{ marginBottom: '40px', textAlign: 'center' }}
+        style={{ marginBottom: '80px', textAlign: 'center' }}
       >
         At Zondax, we are dedicated to{' '}
         <Box
@@ -56,7 +69,7 @@ function AboutUs() {
         variant="h6"
         paragraph
         color="secondary"
-        style={{ textAlign: 'center' }}
+        style={{ textAlign: 'center', marginBottom: '80px' }}
       >
         We are aiming to contribute into{' '}
         <Box
@@ -75,6 +88,13 @@ function AboutUs() {
         solutions and products we want to make the blockchain ecosystem flourish
         and bring value to the people.
       </Typography>
+      <a
+        href="https://zondax.ch/careers"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <WorkWithUs>Join Zondax Team</WorkWithUs>
+      </a>
     </Box>
   )
 }
