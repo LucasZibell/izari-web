@@ -6,19 +6,21 @@ function AboutUs() {
     <Box
       id={HomeIds.ABOUT_US}
       style={{
+        backgroundColor: 'rgb(32, 32, 40)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '10px 100px',
+        padding: '4rem 5rem',
       }}
     >
-      <Typography variant="h2" style={{ fontWeight: 'bold' }}>
+      <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
         What we do
       </Typography>
       <Typography
         variant="h6"
         paragraph
-        style={{ color: '#ACB4BF', marginBottom: '40px', textAlign: 'center' }}
+        color="secondary"
+        style={{ marginBottom: '40px', textAlign: 'center' }}
       >
         At Zondax, we are dedicated to{' '}
         <Box
@@ -47,13 +49,14 @@ function AboutUs() {
           harness the full potential of blockchain and decentralized systems.
         </Box>
       </Typography>
-      <Typography variant="h2" style={{ fontWeight: 'bold' }}>
+      <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
         Our Mission
       </Typography>
       <Typography
         variant="h6"
         paragraph
-        style={{ color: '#ACB4BF', marginBottom: '40px', textAlign: 'center' }}
+        color="secondary"
+        style={{ textAlign: 'center' }}
       >
         We are aiming to contribute into{' '}
         <Box

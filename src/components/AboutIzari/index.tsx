@@ -39,6 +39,7 @@ function AboutIzari() {
         height: '100%',
         alignItems: 'center',
         gap: '70px',
+        padding: '4rem 5rem',
       }}
     >
       <Box
@@ -56,7 +57,8 @@ function AboutIzari() {
         <Typography
           variant="h6"
           paragraph
-          style={{ color: '#ACB4BF', marginBottom: '40px' }}
+          color="secondary"
+          style={{ marginBottom: '40px' }}
         >
           A comprehensive{' '}
           <Box
@@ -74,7 +76,7 @@ function AboutIzari() {
           versatile and flexible solution that can be used across a range of
           environments.
         </Typography>
-        <Typography variant="h2" color="secondary">
+        <Typography variant="h2" color="primary">
           Features
         </Typography>
         <List sx={{ maxWidth: 360 }}>
@@ -85,7 +87,7 @@ function AboutIzari() {
                   <FeatureImage color="primary" />
                 </RotateAvatar>
               </ListItemAvatar>
-              <ListItemText primary={text} />
+              <ListItemText primary={text} style={{ color: 'white' }} />
             </ListItem>
           ))}
         </List>
@@ -100,7 +102,7 @@ function AboutIzari() {
       >
         <Typography
           variant="h4"
-          color="secondary"
+          color="primary"
           style={{ marginBottom: '10px' }}
         >
           Networks
@@ -112,7 +114,7 @@ function AboutIzari() {
         </Box>
         <Typography
           variant="h4"
-          color="secondary"
+          color="primary"
           style={{ alignSelf: 'end', marginBottom: '10px' }}
         >
           Environments
@@ -133,7 +135,7 @@ function AboutIzari() {
         </Box>
         <Typography
           variant="h4"
-          color="secondary"
+          color="primary"
           style={{ marginBottom: '10px' }}
         >
           Web Browsers

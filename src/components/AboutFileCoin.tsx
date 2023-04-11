@@ -21,19 +21,26 @@ function AboutFileCoin() {
   return (
     <Box
       id={HomeIds.ABOUT_FILECOIN}
-      style={{ display: 'flex', gap: '50px', padding: '70px 20px' }}
+      style={{
+        backgroundColor: 'rgb(32, 32, 40)',
+        display: 'flex',
+        gap: '50px',
+        alignItems: 'center',
+        padding: '4rem 5rem',
+      }}
     >
       <Box style={{ backgroundColor: 'white', borderRadius: '300px' }}>
         <Image alt="filecoin" src={FileCoinLogo} width={700} height={308} />
       </Box>
       <Box style={{ display: 'flex', flexDirection: 'column' }}>
-        <Typography variant="h2" style={{ fontWeight: 'bold' }}>
+        <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
           What is Filecoin?
         </Typography>
         <Typography
           variant="h6"
           paragraph
-          style={{ color: '#ACB4BF', marginBottom: '20px' }}
+          color="secondary"
+          style={{ marginBottom: '20px' }}
         >
           Filecoin is a decentralized storage network designed to store
           humanity&apos;s most important information.
