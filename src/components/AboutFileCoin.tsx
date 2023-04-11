@@ -5,7 +5,7 @@ import HomeIds from '@/constants/homeIds'
 import FileCoinLogo from '@/assets/filecoin-logo.png'
 
 interface TextLinkProps extends TypographyProps {
-  primary?: boolean
+  primary?: string
 }
 
 const TextLink = styled(Typography)<TextLinkProps>(({ theme, primary }) => ({
@@ -26,11 +26,15 @@ function AboutFileCoin() {
         display: 'flex',
         gap: '50px',
         alignItems: 'center',
-        padding: '4rem 5rem',
+        padding: '4rem',
       }}
     >
       <Box style={{ backgroundColor: 'white', borderRadius: '300px' }}>
-        <Image alt="filecoin" src={FileCoinLogo} width={700} height={308} />
+        <Image
+          style={{ width: '100%', height: 'auto' }}
+          alt="filecoin"
+          src={FileCoinLogo}
+        />
       </Box>
       <Box style={{ display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h2" style={{ color: 'white', fontWeight: 'bold' }}>
@@ -45,13 +49,13 @@ function AboutFileCoin() {
           Filecoin is a decentralized storage network designed to store
           humanity&apos;s most important information.
         </Typography>
-        <Box style={{ display: 'flex', gap: '80px' }}>
+        <Box style={{ display: 'flex', gap: '30px' }}>
           <a
             href="https://filecoin.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <TextLink primary>Filecoin.io</TextLink>
+            <TextLink primary="true">Filecoin.io</TextLink>
           </a>
           <a
             href="https://fvm.filecoin.io/"

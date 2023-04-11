@@ -38,13 +38,12 @@ function AboutIzari() {
         flexDirection: 'row',
         height: '100%',
         alignItems: 'center',
+        justifyContent: 'space-between',
         gap: '70px',
         padding: '4rem 5rem',
       }}
     >
-      <Box
-        style={{ display: 'flex', flexDirection: 'column', maxWidth: '50vw' }}
-      >
+      <Box style={{ display: 'flex', flexDirection: 'column' }}>
         <Typography
           variant="h1"
           style={{
@@ -97,7 +96,6 @@ function AboutIzari() {
           display: 'flex',
           flexDirection: 'column',
           width: '100%',
-          maxWidth: '50vw',
         }}
       >
         <Typography
@@ -107,9 +105,22 @@ function AboutIzari() {
         >
           Networks
         </Typography>
-        <Box style={{ display: 'flex', gap: '10px', marginBottom: '40px' }}>
+        <Box
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            width: '100%',
+            gap: '10px',
+            marginBottom: '40px',
+          }}
+        >
           {networks.map(({ id, image, alt }) => (
-            <Image alt={alt} src={image} id={id} width={200} height={100} />
+            <Image
+              style={{ width: '100%', height: 'auto', maxWidth: '200px' }}
+              alt={alt}
+              src={image}
+              id={id}
+            />
           ))}
         </Box>
         <Typography
@@ -129,7 +140,11 @@ function AboutIzari() {
         >
           {environments.map(({ id, image, alt }) => (
             <JumpImage id={id}>
-              <Image alt={alt} src={image} width={100} height={100} />
+              <Image
+                alt={alt}
+                src={image}
+                style={{ width: '100%', height: 'auto', maxWidth: '100px' }}
+              />
             </JumpImage>
           ))}
         </Box>
@@ -143,7 +158,11 @@ function AboutIzari() {
         <Box style={{ display: 'flex', gap: '10px' }}>
           {webBrowsers.map(({ id, image, alt }) => (
             <JumpImage id={id}>
-              <Image alt={alt} src={image} width={100} height={100} />
+              <Image
+                alt={alt}
+                src={image}
+                style={{ width: '100%', height: 'auto', maxWidth: '100px' }}
+              />
             </JumpImage>
           ))}
         </Box>
