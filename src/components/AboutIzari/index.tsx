@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { styled } from '@mui/material/styles'
 import {
   Box,
   Typography,
@@ -8,21 +9,26 @@ import {
   Avatar,
   ListItemText,
 } from '@mui/material'
-import { makeStyles } from '@mui/styles'
 import HomeIds from '@/constants/homeIds'
 
 import { features, webBrowsers, environments, networks } from './constants'
 
-const useStyles = makeStyles({
-  avatar: {
-    '&:hover': {
-      animation: 'shake 0.5s',
-    },
+const RotateAvatar = styled(Avatar)(() => ({
+  backgroundColor: 'white',
+  '&:hover': {
+    animation: 'shake 0.5s',
   },
-})
+}))
+
+const JumpImage = styled(Box)(() => ({
+  display: 'inline-block',
+  transition: 'transform 0.3s ease-out',
+  '&:hover': {
+    transform: 'translateY(-10px)',
+  },
+}))
 
 function AboutIzari() {
-  const classes = useStyles()
   return (
     <Box
       id={HomeIds.IZARI_FILECOIN}
@@ -41,10 +47,8 @@ function AboutIzari() {
         <Typography
           variant="h1"
           style={{
-            background:
-              'linear-gradient(to bottom right, rgb(15, 98, 254), rgb(40, 46, 157))',
             color: 'white',
-            marginBottom: '20px',
+            fontWeight: 'bold',
           }}
         >
           Izari Filecoin
@@ -54,7 +58,18 @@ function AboutIzari() {
           paragraph
           style={{ color: '#ACB4BF', marginBottom: '40px' }}
         >
-          A comprehensive set of tools designed to interact with Blockchains.
+          A comprehensive{' '}
+          <Box
+            component="span"
+            sx={{
+              backgroundColor: 'primary.main',
+              color: 'white',
+              display: 'inline',
+              padding: '4px 2px',
+            }}
+          >
+            set of tools designed to interact with Blockchains.
+          </Box>{' '}
           With its focus on compatibility, it provides developers with a
           versatile and flexible solution that can be used across a range of
           environments.
@@ -66,9 +81,9 @@ function AboutIzari() {
           {features.map(({ FeatureImage, text, id }) => (
             <ListItem id={id}>
               <ListItemAvatar>
-                <Avatar className={classes.avatar} sx={{ bgcolor: 'white' }}>
+                <RotateAvatar>
                   <FeatureImage color="primary" />
-                </Avatar>
+                </RotateAvatar>
               </ListItemAvatar>
               <ListItemText primary={text} />
             </ListItem>
@@ -111,7 +126,9 @@ function AboutIzari() {
           }}
         >
           {environments.map(({ id, image, alt }) => (
-            <Image alt={alt} src={image} id={id} width={100} height={100} />
+            <JumpImage id={id}>
+              <Image alt={alt} src={image} width={100} height={100} />
+            </JumpImage>
           ))}
         </Box>
         <Typography
@@ -123,7 +140,9 @@ function AboutIzari() {
         </Typography>
         <Box style={{ display: 'flex', gap: '10px' }}>
           {webBrowsers.map(({ id, image, alt }) => (
-            <Image alt={alt} src={image} id={id} width={100} height={100} />
+            <JumpImage id={id}>
+              <Image alt={alt} src={image} width={100} height={100} />
+            </JumpImage>
           ))}
         </Box>
       </Box>

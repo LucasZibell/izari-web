@@ -38,8 +38,38 @@ a {
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  src: url('./fonts/Epilogue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  src: url('./fonts/Epilogue-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  src: url('./fonts/Epilogue-Light.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
 }

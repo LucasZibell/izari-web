@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Public Sans, Epilogue, sans-serif',
+    fontFamily: 'Epilogue, Public Sans, sans-serif',
   },
   palette: {
     primary: {
