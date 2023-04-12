@@ -74,6 +74,7 @@ function GettingStarted() {
       <Typography
         dangerouslySetInnerHTML={{ __html: yarnInstall }}
         style={{
+          color: 'white',
           fontFamily: 'monospace',
           backgroundColor: '#0a0a0a',
           borderRadius: '5px',
@@ -88,6 +89,7 @@ function GettingStarted() {
       <Typography
         dangerouslySetInnerHTML={{ __html: npmInstall }}
         style={{
+          color: 'white',
           fontFamily: 'monospace',
           backgroundColor: '#0a0a0a',
           borderRadius: '5px',
@@ -108,6 +110,7 @@ function GettingStarted() {
       <Typography
         dangerouslySetInnerHTML={{ __html: esmModuleImport }}
         style={{
+          color: 'white',
           fontFamily: 'monospace',
           backgroundColor: '#0a0a0a',
           borderRadius: '5px',
@@ -122,6 +125,7 @@ function GettingStarted() {
       <Typography
         dangerouslySetInnerHTML={{ __html: commonJSImport }}
         style={{
+          color: 'white',
           fontFamily: 'monospace',
           backgroundColor: '#0a0a0a',
           borderRadius: '5px',
