@@ -163,9 +163,10 @@ function GettingStarted() {
       <Editor
         value={code}
         onValueChange={(newCode) => setCode(newCode)}
-        highlight={(newCode) => highlight(newCode, languages.js, 'en')}
+        highlight={(newCode) => highlight(newCode, languages.js, 'javascript')}
         padding={10}
         style={{
+          color: 'white',
           backgroundColor: 'black',
           fontFamily: '"Fira code", "Fira Mono", monospace',
           fontSize: 18,
