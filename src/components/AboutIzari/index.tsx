@@ -90,7 +90,7 @@ function AboutIzari() {
         </Typography>
         <Typography
           variant="h2"
-          color="primary"
+          color="primary.light"
           style={{ marginBottom: '20px' }}
         >
           Features
@@ -132,7 +132,7 @@ function AboutIzari() {
       >
         <Typography
           variant="h3"
-          color="primary"
+          color="primary.light"
           style={{ marginBottom: '10px' }}
         >
           Networks
@@ -160,7 +160,7 @@ function AboutIzari() {
         </Box>
         <Typography
           variant="h3"
-          color="primary"
+          color="primary.light"
           style={{ marginBottom: '10px' }}
         >
           Environments
@@ -185,7 +185,7 @@ function AboutIzari() {
         </Box>
         <Typography
           variant="h3"
-          color="primary"
+          color="primary.light"
           style={{ marginBottom: '10px' }}
         >
           Web Browsers
