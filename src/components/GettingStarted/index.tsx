@@ -5,7 +5,8 @@ import Editor from 'react-simple-code-editor'
 import { highlight, languages } from 'prismjs'
 import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
-import 'prismjs/themes/prism.css'
+import 'prismjs/components/prism-bash'
+import 'prismjs/themes/prism-tomorrow.css'
 import HomeIds from '@/constants/homeIds'
 import GithubLogo from '@/assets/github-big-logo.png'
 import NpmLogo from '@/assets/npm-logo.png'
@@ -13,6 +14,31 @@ import { specificFeatures, codeExample } from './constants'
 
 function GettingStarted() {
   const [code, setCode] = useState(codeExample)
+
+  const esmModuleImport = highlight(
+    'import { Wallet, Transaction, Account } from "@zondax/izari-filecoin"',
+    languages.js,
+    'javascript'
+  )
+
+  const commonJSImport = highlight(
+    'const { Wallet, Transaction, Account } = require("@zondax/izari-filecoin")',
+    languages.js,
+    'javascript'
+  )
+
+  const yarnInstall = highlight(
+    'yarn add @zondax/izari-filecoin',
+    languages.bash,
+    'bash'
+  )
+
+  const npmInstall = highlight(
+    'npm install --save @zondax/izari-filecoin',
+    languages.bash,
+    'bash'
+  )
+
   return (
     <Box
       id={HomeIds.GETTING_STARTED}
@@ -27,7 +53,12 @@ function GettingStarted() {
     >
       <Typography
         variant="h2"
-        style={{ color: 'white', fontWeight: 'bold', marginBottom: '40px' }}
+        style={{
+          alignSelf: 'center',
+          color: 'white',
+          fontWeight: 'bold',
+          marginBottom: '40px',
+        }}
       >
         How to start?
       </Typography>
@@ -41,34 +72,30 @@ function GettingStarted() {
         Using Yarn
       </Typography>
       <Typography
-        variant="h6"
+        dangerouslySetInnerHTML={{ __html: yarnInstall }}
         style={{
-          color: 'white',
-          backgroundColor: 'black',
+          fontFamily: 'monospace',
+          backgroundColor: '#0a0a0a',
           borderRadius: '5px',
           padding: '5px 10px',
           marginBottom: '40px',
-          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
+          boxShadow: '0px 0px 5px 1px rgb(73 75 96)',
         }}
-      >
-        yarn add @zondax/izari-filecoin
-      </Typography>
+      />
       <Typography variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
         Using NPM
       </Typography>
       <Typography
-        variant="h6"
+        dangerouslySetInnerHTML={{ __html: npmInstall }}
         style={{
-          color: 'white',
-          backgroundColor: 'black',
+          fontFamily: 'monospace',
+          backgroundColor: '#0a0a0a',
           borderRadius: '5px',
           padding: '5px 10px',
           marginBottom: '60px',
-          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
+          boxShadow: '0px 0px 5px 1px rgb(73 75 96)',
         }}
-      >
-        npm install --save @zondax/izari-filecoin
-      </Typography>
+      />
       <Typography
         variant="h3"
         style={{ fontWeight: 'bold', color: 'white', marginBottom: '30px' }}
@@ -79,34 +106,30 @@ function GettingStarted() {
         ESM modules
       </Typography>
       <Typography
-        variant="h6"
+        dangerouslySetInnerHTML={{ __html: esmModuleImport }}
         style={{
-          color: 'white',
-          backgroundColor: 'black',
+          fontFamily: 'monospace',
+          backgroundColor: '#0a0a0a',
           borderRadius: '5px',
           padding: '5px 10px',
           marginBottom: '40px',
-          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
+          boxShadow: '0px 0px 5px 1px rgb(73 75 96)',
         }}
-      >
-        {`import { Wallet, Transaction, Account } from "@zondax/izari-filecoin"`}
-      </Typography>
+      />
       <Typography variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
         CommonJS modules
       </Typography>
       <Typography
-        variant="h6"
+        dangerouslySetInnerHTML={{ __html: commonJSImport }}
         style={{
-          color: 'white',
-          backgroundColor: 'black',
+          fontFamily: 'monospace',
+          backgroundColor: '#0a0a0a',
           borderRadius: '5px',
           padding: '5px 10px',
           marginBottom: '60px',
-          boxShadow: '5px 7px 5px 0px rgb(15, 98, 254)',
+          boxShadow: '0px 0px 5px 1px rgb(73 75 96)',
         }}
-      >
-        {`const { Wallet, Transaction, Account } = require("@zondax/izari-filecoin")`}
-      </Typography>
+      />
       <Typography
         variant="h3"
         style={{ fontWeight: 'bold', color: 'white', marginBottom: '10px' }}
@@ -131,18 +154,15 @@ function GettingStarted() {
         variant="h4"
         style={{ fontWeight: 'bold', color: 'white', marginBottom: '40px' }}
       >
-        Examples 🛠️
+        Example 🛠️
       </Typography>
       <Editor
         value={code}
         onValueChange={(newCode) => setCode(newCode)}
-        highlight={(newCode) =>
-          highlight(newCode, languages.javascript, 'javascript')
-        }
+        highlight={(newCode) => highlight(newCode, languages.js, 'en')}
         padding={10}
         style={{
-          borderRadius: '10px',
-          backgroundColor: '#fafafa',
+          backgroundColor: 'black',
           fontFamily: '"Fira code", "Fira Mono", monospace',
           fontSize: 18,
           marginBottom: '60px',

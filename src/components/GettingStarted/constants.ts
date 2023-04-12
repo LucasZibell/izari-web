@@ -12,7 +12,8 @@ export const specificFeatures = [
 export const codeExample = `import { Token } from "@zondax/izari-filecoin";
 // const { Token } = require("@zondax/izari-filecoin"); CommonJS Modules
 
-import { Token as Token2 } from "@zondax/izari-filecoin/token" // Using specific import
+// Using specific import
+import { Token as Token2 } from "@zondax/izari-filecoin/token"
 
 const valueInFil = Token.fromAtto("10000000000000000");
 

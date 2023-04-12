@@ -75,7 +75,7 @@ function AboutIzari() {
           <Box
             component="span"
             sx={{
-              borderRadius: '20px',
+              borderRadius: '5px',
               backgroundColor: 'primary.main',
               color: 'white',
               display: 'inline',
@@ -126,6 +126,7 @@ function AboutIzari() {
         style={{
           display: 'flex',
           flexDirection: 'column',
+          minWidth: '340px',
           width: '100%',
         }}
       >
@@ -169,7 +170,6 @@ function AboutIzari() {
             display: 'flex',
             gap: '10px',
             marginBottom: '40px',
-            // alignSelf: 'end',
             alignItems: 'center',
           }}
         >

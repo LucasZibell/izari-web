@@ -16,6 +16,11 @@ const TextLink = styled(Typography)<TextLinkProps>(({ theme, primary }) => ({
   padding: '10px 20px',
   borderRadius: '40px',
   minWidth: '182px',
+  boxShadow: '-10px 10px 0px 0px rgba(0, 0, 0, 0.3)',
+  transition: 'box-shadow 0.3s ease-out',
+  '&:hover': {
+    boxShadow: '-15px 15px 0px 0px rgba(0, 0, 0, 0.3)',
+  },
 }))
 
 function AboutFileCoin() {

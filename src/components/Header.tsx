@@ -1,10 +1,19 @@
 import { MouseEvent } from 'react'
 import Image from 'next/image'
+import { styled } from '@mui/material/styles'
 import { Box, Link, Typography } from '@mui/material'
 import ZondaxLogo from '@/assets/zondaxLogo.svg'
 import HomeIds from '@/constants/homeIds'
 
 const { ABOUT_FILECOIN, GETTING_STARTED, ABOUT_US } = HomeIds
+
+const NavBarLink = styled(Typography)(({ theme }) => ({
+  color: 'white',
+  transition: 'color 0.3s ease-out',
+  '&:hover': {
+    color: theme.palette.primary.main,
+  },
+}))
 
 function Header() {
   const scrollToTarget = (
@@ -38,21 +47,21 @@ function Header() {
         onClick={(e) => scrollToTarget(e, ABOUT_FILECOIN)}
         style={{ textDecoration: 'none' }}
       >
-        <Typography style={{ color: 'white' }}>What is Filecoin?</Typography>
+        <NavBarLink>What is Filecoin?</NavBarLink>
       </Link>
       <Link
         href={`#${GETTING_STARTED}`}
         onClick={(e) => scrollToTarget(e, GETTING_STARTED)}
         style={{ textDecoration: 'none' }}
       >
-        <Typography style={{ color: 'white' }}>Getting Started</Typography>
+        <NavBarLink>Getting Started</NavBarLink>
       </Link>
       <Link
         href={`#${ABOUT_US}`}
         onClick={(e) => scrollToTarget(e, ABOUT_US)}
         style={{ textDecoration: 'none' }}
       >
-        <Typography style={{ color: 'white' }}>About Us</Typography>
+        <NavBarLink>About Us</NavBarLink>
       </Link>
     </Box>
   )

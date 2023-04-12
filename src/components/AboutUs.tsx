@@ -42,7 +42,7 @@ function AboutUs() {
         <Box
           component="span"
           sx={{
-            borderRadius: '20px',
+            borderRadius: '5px',
             backgroundColor: 'primary.main',
             color: 'white',
             display: 'inline',
@@ -57,7 +57,7 @@ function AboutUs() {
         <Box
           component="span"
           sx={{
-            borderRadius: '20px',
+            borderRadius: '5px',
             backgroundColor: 'primary.main',
             color: 'white',
             display: 'inline',
@@ -83,7 +83,7 @@ function AboutUs() {
         <Box
           component="span"
           sx={{
-            borderRadius: '20px',
+            borderRadius: '5px',
             backgroundColor: 'primary.main',
             color: 'white',
             display: 'inline',
