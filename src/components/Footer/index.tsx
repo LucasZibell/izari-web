@@ -10,6 +10,7 @@ import { legalItems, companyItems, solutionItems } from './constants'
 function Footer() {
   return (
     <Box
+      component="footer"
       style={{
         padding: '2rem 5rem',
         width: '100%',

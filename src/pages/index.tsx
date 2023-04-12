@@ -22,8 +22,8 @@ function Home() {
         <AboutFileCoin />
         <GettingStarted />
         <AboutUs />
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }
